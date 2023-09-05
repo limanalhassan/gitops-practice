@@ -70,4 +70,3 @@ status:
     - ReadWriteOnce	
   capacity:	
     storage: 8Gi	
-  phase: Bound
