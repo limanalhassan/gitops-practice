@@ -1,72 +1,73 @@
-apiVersion: v1	
-kind: PersistentVolumeClaim	
-metadata:	
-  annotations:	
-    pv.kubernetes.io/bind-completed: 'yes'	
-    pv.kubernetes.io/bound-by-controller: 'yes'	
-    volume.beta.kubernetes.io/storage-provisioner: docker.io/hostpath	
-    volume.kubernetes.io/storage-provisioner: docker.io/hostpath	
-  finalizers:	
-    - kubernetes.io/pvc-protection	
-  labels:	
-    app.kubernetes.io/component: primary	
-    app.kubernetes.io/instance: wordpress	
-    app.kubernetes.io/name: mariadb	
-  managedFields:	
-    - apiVersion: v1	
-      fieldsType: FieldsV1	
-      fieldsV1:	
-        'f:metadata':	
-          'f:annotations':	
-            .: {}	
-            'f:pv.kubernetes.io/bind-completed': {}	
-            'f:pv.kubernetes.io/bound-by-controller': {}	
-            'f:volume.beta.kubernetes.io/storage-provisioner': {}	
-            'f:volume.kubernetes.io/storage-provisioner': {}	
-          'f:labels':	
-            .: {}	
-            'f:app.kubernetes.io/component': {}	
-            'f:app.kubernetes.io/instance': {}	
-            'f:app.kubernetes.io/name': {}	
-        'f:spec':	
-          'f:accessModes': {}	
-          'f:resources':	
-            'f:requests':	
-              .: {}	
-              'f:storage': {}	
-          'f:volumeMode': {}	
-          'f:volumeName': {}	
-      manager: kube-controller-manager	
-      operation: Update	
-      time: '2023-09-05T01:03:11Z'	
-    - apiVersion: v1	
-      fieldsType: FieldsV1	
-      fieldsV1:	
-        'f:status':	
-          'f:accessModes': {}	
-          'f:capacity':	
-            .: {}	
-            'f:storage': {}	
-          'f:phase': {}	
-      manager: kube-controller-manager	
-      operation: Update	
-      subresource: status	
-      time: '2023-09-05T01:03:11Z'	
-  name: data-wordpress-mariadb-0	
-  namespace: default	
-  resourceVersion: '2902076'	
-  uid: f403d71a-8745-49a9-ae54-42c7d5e3a4f6	
-spec:	
-  accessModes:	
-    - ReadWriteOnce	
-  resources:	
-    requests:	
-      storage: 8Gi	
-  storageClassName: hostpath	
-  volumeMode: Filesystem	
-  volumeName: pvc-f403d71a-8745-49a9-ae54-42c7d5e3a4f6	
-status:	
-  accessModes:	
-    - ReadWriteOnce	
-  capacity:	
-    storage: 8Gi	
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    pv.kubernetes.io/bind-completed: 'yes'
+    pv.kubernetes.io/bound-by-controller: 'yes'
+    volume.beta.kubernetes.io/storage-provisioner: docker.io/hostpath
+    volume.kubernetes.io/storage-provisioner: docker.io/hostpath
+  finalizers:
+    - kubernetes.io/pvc-protection
+  labels:
+    app.kubernetes.io/component: primary
+    app.kubernetes.io/instance: wordpress
+    app.kubernetes.io/name: mariadb
+  managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:pv.kubernetes.io/bind-completed': {}
+            'f:pv.kubernetes.io/bound-by-controller': {}
+            'f:volume.beta.kubernetes.io/storage-provisioner': {}
+            'f:volume.kubernetes.io/storage-provisioner': {}
+          'f:labels':
+            .: {}
+            'f:app.kubernetes.io/component': {}
+            'f:app.kubernetes.io/instance': {}
+            'f:app.kubernetes.io/name': {}
+        'f:spec':
+          'f:accessModes': {}
+          'f:resources':
+            'f:requests':
+              .: {}
+              'f:storage': {}
+          'f:volumeMode': {}
+          'f:volumeName': {}
+      manager: kube-controller-manager
+      operation: Update
+      time: '2023-09-05T01:03:11Z'
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          'f:accessModes': {}
+          'f:capacity':
+            .: {}
+            'f:storage': {}
+          'f:phase': {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: '2023-09-05T01:03:11Z'
+  name: data-wordpress-mariadb-0
+  namespace: default
+  resourceVersion: '2902076'
+  uid: f403d71a-8745-49a9-ae54-42c7d5e3a4f6
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi
+  storageClassName: hostpath
+  volumeMode: Filesystem
+  volumeName: pvc-f403d71a-8745-49a9-ae54-42c7d5e3a4f6
+status:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 8Gi
+    
